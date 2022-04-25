@@ -1,6 +1,6 @@
 {
-  "name": "cypress-email-results",
-  "version": "0.0.0-development",
+  "name": "cypress-email-results-v2",
+  "version": "0.0.1",
   "description": "Easily email the test results after Cypress is done",
   "main": "src",
   "files": [
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bahmutov/cypress-email-results.git"
+    "url": "https://github.com/ivicelig/cypress-email-results.git"
   },
   "dependencies": {
     "ci-info": "^3.3.0",
