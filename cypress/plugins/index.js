@@ -30,4 +30,10 @@ module.exports = (on, config) => {
         })
     }
 
+    if (process.env.BASE_STORE) {
+        require('../../src')(on, config, {
+            baseStore: process.env.BASE_STORE
+        })
+    }
+
 }

@@ -73,6 +73,10 @@ function registerCypressEmailResults(on, config, options) {
       options.environment = ""
   }
 
+  if (!options.baseStore) {
+      options.baseStore = ""
+  }
+
   const emails = Array.isArray(options.email) ? options.email : [options.email]
   if (!on) {
     throw new Error('Missing required option: on')
@@ -168,8 +172,8 @@ function registerCypressEmailResults(on, config, options) {
 
     const name = getProjectName()
     const subject = name
-      ? `${name} ${options.environment} - Cypress tests ${runStatus}`
-      : `${options.environment} Cypress tests ${runStatus}`
+      ? `${name} ${options.environment} - ${options.baseStore} - Cypress tests ${runStatus}`
+      : `${options.environment} - ${options.baseStore} - Cypress tests ${runStatus}`
     const dashboard = afterRun.runUrl ? `Run url: ${afterRun.runUrl}\n` : ''
     let text = textStart + '\n\n' + testResults + '\n' + dashboard
 
